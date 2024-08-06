@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+   development-db:
+     image: postgres:13
+     ports:
+       - 5435:5432
+     environment:
+        POSTGRES_USER: verygood
+        POSTGRES_PASSWORD: 1234
+        POSTGRES_DB: nest-api-npm-new
+     networks:
+        - freecodecamp
+
+networks:
+  freecodecamp:
